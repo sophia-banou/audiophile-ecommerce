@@ -1,0 +1,37 @@
+---
+import styles from "./Hero.module.css";
+import Button from "../Button/index.astro";
+---
+
+<div class={styles.hero}>
+  <picture class={styles.heroPicture}>
+    <source
+      srcset="/audiophile-ecommerce/assets/home/desktop/image-hero.jpg"
+      media="(min-width: 1024px)"
+    />
+    <source
+      srcset="/audiophile-ecommerce/assets/home/tablet/image-header.jpg"
+      media="(min-width: 600px)"
+    />
+    <source
+      srcset="/audiophile-ecommerce/assets/home/mobile/image-header.jpg"
+      media="(max-width: 599px)"
+    />
+    <img
+      class={styles.heroImage}
+      src="/audiophile-ecommerce/assets/home/desktop/image-hero.jpg"
+      alt="Hero"
+    />
+  </picture>
+  <div class={styles.heroInfo}>
+    <div class={styles.heroText}>
+      <span class="overline"> NEW PRODUCT </span>
+      <h1>XX99 MARK II HEADPHONES</h1>
+      <p>
+        Experience natural, lifelike audio and exceptional build quality made
+        for the passionate music enthusiast.
+      </p>
+    </div>
+    <Button buttonType="1" link="#" text="SEE PRODUCT" />
+  </div>
+</div>

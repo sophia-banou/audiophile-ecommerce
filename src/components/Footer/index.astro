@@ -1,0 +1,67 @@
+---
+import styles from "./Footer.module.css";
+---
+
+<footer class=`${styles.footer} horizontal-pad`>
+  <div class={styles.footerLine}></div>
+  <div class={styles.footerInner}>
+    <div class={styles.footerTop}>
+      <a href="#" class={styles.footerLogo} data-astro-prefetch>
+        <img
+          src="/audiophile-ecommerce/assets/shared/desktop/logo.svg"
+          alt="Logo"
+        />
+      </a>
+      <nav class={styles.footerNavigation}>
+        <a href="#" class={styles.footerItem} data-astro-prefetch>
+          <span class="subtitle">HOME</span>
+        </a>
+        <a href="#" class={styles.footerItem} data-astro-prefetch>
+          <span class="subtitle">HEADPHONES</span>
+        </a>
+        <a href="#" class={styles.footerItem} data-astro-prefetch>
+          <span class="subtitle">SPEAKERS</span>
+        </a>
+        <a href="#" class={styles.footerItem} data-astro-prefetch>
+          <span class="subtitle">EARPHONES</span>
+        </a>
+      </nav>
+    </div>
+    <div class={styles.footerBody}>
+      <div class={styles.footerInfo}>
+        <p class={styles.footerText}>
+          Audiophile is an all in one stop to fulfill your audio needs. We're a
+          small team of music lovers and sound specialists who are devoted to
+          helping you get the most out of personal audio. Come and visit our
+          demo facility - we’re open 7 days a week.
+        </p>
+        <p class={styles.footerCopyright}>
+          Copyright 2021. All Rights Reserved
+        </p>
+      </div>
+      <div class={styles.footerSocials}>
+        <a href="#" class={styles.footerSocialIcon} data-astro-prefetch>
+          <img
+            class="ficon"
+            src="/audiophile-ecommerce/assets/shared/desktop/icon-facebook.svg"
+            alt="Facebook"
+          />
+        </a>
+        <a href="#" class={styles.footerSocialIcon} data-astro-prefetch>
+          <img
+            class="ficon"
+            src="/audiophile-ecommerce/assets/shared/desktop/icon-twitter.svg"
+            alt="Twitter"
+          />
+        </a>
+        <a href="#" class={styles.footerSocialIcon}>
+          <img
+            class="ficon"
+            src="/audiophile-ecommerce/assets/shared/desktop/icon-instagram.svg"
+            alt="Instagram"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

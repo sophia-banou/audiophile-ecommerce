@@ -1,0 +1,62 @@
+.hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+
+.heroPicture {
+    width: 100%;
+    height: auto;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.heroInfo {
+    max-width: 398px;
+    width: 27.63vw;
+    height: auto;
+    position: absolute;
+    top: 15.6vw;
+    left: 11.46vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-41);
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-24);
+}
+
+.heroText span {
+    color: var(--white);
+    opacity: 49.64%;
+}
+
+.heroText h1 {
+    color: var(--white);
+}
+
+.heroText p {
+    color: var(--white);
+    opacity: 75%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .heroInfo {
+        max-width: none;
+        width: 49.34vw;
+        top: 28.125vw;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        text-align: center;
+    }
+}

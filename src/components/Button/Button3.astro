@@ -1,0 +1,12 @@
+---
+import styles from "./Button.module.css";
+const { link, text } = Astro.props;
+---
+
+<a href={link} class={styles.button3} data-astro-prefetch>
+  <span class="subtitle">{text}</span>
+  <img
+    src="/audiophile-ecommerce/assets/shared/desktop/icon-arrow-right.svg"
+    alt="Arrow Right"
+  />
+</a>

@@ -1,0 +1,83 @@
+/* BUTTON 1 */
+
+.button1 {
+    width: 160px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+}
+
+.button1 span {
+    color: var(--white);
+}
+
+.button1:hover {
+    background-color: var(--light-orange);
+}
+
+/* BUTTON 2 */
+
+.button2 {
+    width: 160px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+}
+
+.button2 span {
+    color: var(--white);
+}
+
+.button2:hover {
+    background-color: var(--dark-grey2);
+}
+
+/* BUTTON 3  */
+.button3 {
+    width: 160px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sp-12);
+    background-color: transparent;
+}
+
+.button3 span {
+    color: var(--black);
+    opacity: 50%;
+}
+
+.button3:hover span {
+    color: var(--orange);
+    opacity: 100%;
+}
+
+/* BUTTON 4 */
+
+.button4 {
+    width: 160px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--black);
+}
+
+.button4 span {
+    color: var(--black);
+}
+
+.button4:hover {
+    background-color: var(--black);
+}
+
+.button4:hover span {
+    color: var(--white);
+}

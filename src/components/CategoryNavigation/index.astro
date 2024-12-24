@@ -1,0 +1,26 @@
+---
+import styles from "./CategoryNavigation.module.css";
+import Button from "../Button/index.astro";
+import Item from "./item.astro";
+---
+
+<div class={styles.categories}>
+  <Item
+    link="#"
+    text="HEADPHONES"
+    image="/audiophile-ecommerce/assets/shared/desktop/image-category-thumbnail-headphones.png"
+    alt="Headphones"
+  />
+  <Item
+    link="#"
+    text="SPEAKERS"
+    image="/audiophile-ecommerce/assets/shared/desktop/image-category-thumbnail-speakers.png"
+    alt="Speakers"
+  />
+  <Item
+    link="#"
+    text="EARPHONES"
+    image="/audiophile-ecommerce/assets/shared/desktop/image-category-thumbnail-earphones.png"
+    alt="Earphones"
+  />
+</div>

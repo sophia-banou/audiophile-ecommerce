@@ -1,0 +1,18 @@
+---
+import styles from "./CategoryNavigation.module.css";
+import Button from "../Button/index.astro";
+const { link, text, image, alt } = Astro.props;
+---
+
+<div class={styles.item}>
+  <div class={styles.categoryBox}>
+    <picture class={styles.categoryPicture}>
+      <img src={image} alt={alt} />
+    </picture>
+    <div class={styles.categoryShadow}></div>
+    <div class={styles.categoryText}>
+      <h6>{text}</h6>
+      <Button buttonType="3" link={link} text="SHOP" />
+    </div>
+  </div>
+</div>

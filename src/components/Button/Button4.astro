@@ -1,0 +1,8 @@
+---
+import styles from "./Button.module.css";
+const { link, text } = Astro.props;
+---
+
+<a href={link} class={styles.button4} data-astro-prefetch>
+  <span class="subtitle">{text}</span>
+</a>
