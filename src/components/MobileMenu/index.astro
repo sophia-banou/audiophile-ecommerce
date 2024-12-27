@@ -1,0 +1,13 @@
+---
+import MobileHeader from "../Header/mobileHeader.astro";
+import CategoryNavigation from "../CategoryNavigation/index.astro";
+import styles from "./MobileMenu.module.css";
+---
+
+<div class={styles.mobileMenu} id="mobilemenu">
+  <MobileHeader />
+  <div class={styles.mobileInner}>
+    <CategoryNavigation />
+  </div>
+</div>
+<div class={styles.mobileOverlay} id="mobileoverlay"></div>

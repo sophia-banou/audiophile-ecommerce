@@ -9,6 +9,14 @@
     background-color: transparent;
 }
 
+.mobileHeader {
+    /* max-width: 100%; */
+    width: 100%;
+    display: flex;
+    z-index: 2000;
+    background-color: var(--black);
+}
+
 .headerInner {
     width: 100%;
     height: 100%;
@@ -26,6 +34,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .headerLogo img {
@@ -81,4 +90,28 @@
         display: flex;
     }
 
+
+}
+
+@media only screen and (max-width: 599px) {
+    .header {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .mobileHeader {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .headerInner {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .headerLogo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

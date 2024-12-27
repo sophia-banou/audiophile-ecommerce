@@ -60,3 +60,19 @@
         text-align: center;
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .heroInfo {
+        gap: 28px;
+        width: 87.47vw;
+        top: 52.8vw;
+    }
+
+    .heroText {
+        gap: 16px;
+    }
+
+    .heroText h1 {
+        margin-bottom: 8px;
+    }
+}

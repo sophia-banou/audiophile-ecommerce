@@ -202,6 +202,14 @@ body {
 
 }
 
+@media only screen and (max-width: 599px) {
+    .horizontal-pad {
+        padding-left: 6.4vw;
+        padding-right: 6.4vw;
+    }
+
+}
+
 
 .home__main {
     width: 100%;
@@ -229,6 +237,26 @@ body {
         gap: 96px;
     }
 }
+
+
+@media only screen and (max-width: 599px) {
+    .home__main {
+        padding-top: 40px;
+    }
+
+    .main-wrapper {
+        gap: 96px;
+    }
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* HOME BANNERS  */
 .home__banners {
@@ -309,24 +337,18 @@ body {
     opacity: 75%;
 }
 
-/* .home__banner1 {
-    width: 100%;
-    max-height: 560px;
-    height: 38.88vw;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    background-color: var(--orange);
-    border-radius: 8px;
-    overflow: hidden;
-    padding-right: 6.59vw;
-} */
-
 @media only screen and (max-width: 1024px) {
+    .home__banners {
+        gap: 32px;
+    }
+
     .home__banner1 {
         max-height: 720px;
         height: 93.75vw;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 0px;
+        padding-bottom: 64px;
     }
 
     .home__banner1 .banner1__picture {
@@ -341,14 +363,65 @@ body {
     }
 
     .home__banner1 .banner1__pattern {
-        left: -10.34vw;
-        bottom: -24.2vw;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 7.94vw;
     }
 
     .home__banner1 .banner1__pattern img {
         width: 122.9vw;
     }
 
+    .home__banner1 .banner1__info {
+        align-items: center;
+        width: auto;
+    }
+
+    .home__banner1 .banner1__info .banner1__text {
+        text-align: center;
+    }
+
+}
+
+
+@media only screen and (max-width: 599px) {
+    .home__banners {
+        gap: 24px;
+    }
+
+    .home__banner1 {
+        max-height: none;
+        height: 160vw;
+        padding-bottom: 16.8vw;
+    }
+
+    .home__banner1 .banner1__picture {
+        top: 14.66vw;
+    }
+
+    .home__banner1 .banner1__picture img {
+        max-width: 172.25px;
+        width: 45.93vw;
+    }
+
+    .home__banner1 .banner1__pattern {
+        transform: translateX(-50%);
+        left: 50%;
+        top: -32.26vw;
+    }
+
+    .home__banner1 .banner1__pattern img {
+        width: 148.8vw;
+    }
+
+    .home__banner1 .banner1__info {
+        gap: 23px;
+    }
+
+    .home__banner1 .banner1__info .banner1__text {
+        gap: 20px;
+        max-width: 280px;
+    }
 
 }
 
@@ -384,6 +457,27 @@ body {
     transform: translateY(-50%);
     left: 6.59vw;
 }
+
+@media only screen and (max-width: 1024px) {
+    .home__banner2 {
+        height: 41.66vw;
+    }
+
+    .banner2__info {
+        left: 8.07vw;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .home__banner2 {
+        height: 85.33vw;
+    }
+
+    .banner2__info {
+        left: 3.4vw;
+    }
+}
+
 
 /* BANNER 3  */
 .home__banner3 {
@@ -427,6 +521,37 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--sp-32);
+}
+
+@media only screen and (max-width: 1024px) {
+    .home__banner3 {
+        height: 41.66vw;
+    }
+
+    .home__banner3 .banner3__box {
+        padding-left: 5.34vw;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .home__banner3 {
+        height: auto;
+        max-height: none;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .home__banner3 .banner3__picture {
+        height: 53.33vw;
+        max-height: 53.33vw;
+    }
+
+    .home__banner3 .banner3__box {
+        height: 53.33vw;
+        width: 100%;
+        max-width: none;
+        padding-left: 6.4vw;
+    }
 }
 
 /* FOOTER BANNER */
@@ -485,4 +610,53 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .fbanner {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    .fbanner__inner {
+        flex-direction: column;
+        max-height: none;
+        height: auto;
+        gap: 63px;
+    }
+
+    .fbanner__text {
+        order: 2;
+        max-width: none;
+        width: 74.61vw;
+        text-align: center;
+    }
+
+    .fbanner__picture {
+        order: 1;
+        max-width: none;
+        width: 100%;
+        max-height: 300px;
+        height: 39.06vw;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .fbanner {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .fbanner__inner {
+        gap: 32px;
+    }
+
+    .fbanner__text {
+        width: 87.2vw;
+    }
+
+    .fbanner__picture {
+        max-height: 300px;
+        height: 80vw;
+    }
 }

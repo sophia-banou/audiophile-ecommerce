@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header/index.astro";
 import Footer from "../components/Footer/index.astro";
+import MobileMenu from "../components/MobileMenu/index.astro";
 const basePath = import.meta.env.BASE_URL || "/";
 ---
 
@@ -27,6 +28,7 @@ const basePath = import.meta.env.BASE_URL || "/";
 
   <body>
     <Header />
+    <MobileMenu />
     <slot />
     <section class="fbanner horizontal-pad">
       <div class="fbanner__inner">
@@ -44,6 +46,18 @@ const basePath = import.meta.env.BASE_URL || "/";
           </p>
         </div>
         <picture class="fbanner__picture">
+          <source
+            srcset="/audiophile-ecommerce/assets/shared/desktop/image-best-gear.jpg"
+            media="(min-width:1025px)"
+          />
+          <source
+            srcset="/audiophile-ecommerce/assets/shared/tablet/image-best-gear.jpg"
+            media="(max-width:1024px)"
+          />
+          <source
+            srcset="/audiophile-ecommerce/assets/shared/mobile/image-best-gear.jpg"
+            media="(max-width:599px)"
+          />
           <img
             src="/audiophile-ecommerce/assets/shared/desktop/image-best-gear.jpg"
             alt="Best Gear"

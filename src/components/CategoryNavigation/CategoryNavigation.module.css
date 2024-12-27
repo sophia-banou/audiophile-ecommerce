@@ -69,3 +69,35 @@
         top: -7.68vw;
     }
 }
+
+
+@media only screen and (max-width: 599px) {
+    .categories {
+        flex-direction: column;
+        max-height: none;
+        height: auto;
+        gap: 16px;
+    }
+
+    .item {
+        height: 57.86vw;
+        max-height: 217px;
+    }
+
+    .categoryBox {
+        margin-top: 13.86vw;
+        padding-bottom: 11px;
+    }
+
+    .categoryText {
+        gap: 6px;
+    }
+
+    .categoryPicture img {
+        height: 33.86vw;
+    }
+
+    .categoryPicture {
+        top: -13.86vw;
+    }
+}

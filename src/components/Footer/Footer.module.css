@@ -33,9 +33,9 @@
 }
 
 .footerLogo img {
-    max-width: 143px;
-    width: 9.93vw;
+    width: 143px;
     height: auto;
+    object-fit: cover;
 }
 
 .footerNavigation {
@@ -58,29 +58,38 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footerInfo {
-    max-width: 540px;
-    width: 37.5vw;
-    height: auto;
-    display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--sp-56);
 }
 
+.footerInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
 
-.footerInfo p {
+
+.footerText {
+    max-width: 540px;
+    width: 52.7vw;
+    color: var(--white);
+    opacity: 50%;
+}
+
+.footerCopyright {
     color: var(--white);
     opacity: 50%;
 }
 
 
-
 .footerSocials {
+    position: absolute;
+    right: 0;
+    top: -6.34vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -90,4 +99,80 @@
 .footerSocialIcon {
     width: 24px;
     height: auto;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .footerLine {
+        width: 13.15vw;
+    }
+
+    .footer {
+        padding-top: 60px;
+        padding-bottom: 46px;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .footerText {
+        max-width: none;
+        width: 100%;
+    }
+
+
+    .footerSocials {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+
+
+    .footerLine {
+        max-width: 137px;
+        width: 36.53vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer {
+        padding-top: 52px;
+        padding-bottom: 38px;
+    }
+
+    .footerTop {
+        align-items: center;
+        gap: 48px;
+    }
+
+    .footerText {
+        text-align: center;
+    }
+
+    .footerInner {
+        gap: 48px;
+    }
+
+    .footerBody {
+        gap: 48px;
+    }
+
+    .footerSocials {
+        position: static;
+    }
+
+    .footerNavigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footerInfo {
+        flex-direction: column;
+        gap: 48px;
+    }
 }
