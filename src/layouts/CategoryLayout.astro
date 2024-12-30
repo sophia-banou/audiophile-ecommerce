@@ -1,0 +1,15 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import CategoryTitle from "../components/CategoryTitle/index.astro";
+import ProductList from "../components/ProductList/index.astro";
+import CategoryNavigation from "../components/CategoryNavigation/index.astro";
+const { category } = Astro.props;
+---
+
+<BaseLayout>
+  <CategoryTitle categoryTitle={category} />
+  <ProductList category={category} />
+  <div class="horizontal-pad">
+    <CategoryNavigation />
+  </div>
+</BaseLayout>

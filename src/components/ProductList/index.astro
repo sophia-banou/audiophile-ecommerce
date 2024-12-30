@@ -1,0 +1,24 @@
+---
+import styles from "./ProductList.module.css";
+import ProductItem from "./item.astro";
+const { category } = Astro.props;
+import data from "../../data/data.json";
+const products = data.filter((product) => product.category === category);
+// sort products: new first, then based on price
+products.sort((a, b) => {
+  if (b.new === a.new) {
+    return b.price - a.price;
+  }
+  return b.new ? 1 : -1;
+});
+---
+
+<div class=`${styles.listWrapper} horizontal-pad`>
+  <ul class={styles.list}>
+    {
+      products.map((product, index) => (
+        <ProductItem product={product} index={index} />
+      ))
+    }
+  </ul>
+</div>

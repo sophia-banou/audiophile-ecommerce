@@ -1,0 +1,28 @@
+---
+import styles from "./ProductList.module.css";
+import Button from "../Button/index.astro";
+const { product, index } = Astro.props;
+---
+
+<div class={styles.item}>
+  <picture
+    class={styles.productPicture}
+    data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+  >
+    <source
+      srcset={product.categoryImage.desktop}
+      media="(min-width: 1024px)"
+    />
+    <source srcset={product.categoryImage.tablet} media="(min-width: 600px)" />
+    <source srcset={product.categoryImage.mobile} media="(max-width: 599px)" />
+    <img src={product.categoryImage.desktop} alt={product.name} />
+  </picture>
+  <div class={styles.productInfo} data-aos="fade-up">
+    <div class={styles.productText}>
+      {product.new && <span class="overline">NEW PRODUCT</span>}
+      <h2>{product.name}</h2>
+      <p>{product.description}</p>
+    </div>
+    <Button buttonType="1" link="#" text="SEE PRODUCT" />
+  </div>
+</div>

@@ -1,5 +1,6 @@
 ---
 import styles from "./Header.module.css";
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <header class=`${styles.header} horizontal-pad`>
@@ -11,7 +12,7 @@ import styles from "./Header.module.css";
           src="/audiophile-ecommerce/assets/shared/tablet/icon-hamburger.svg"
           alt="Logo"
         />
-        <a href="#" class={styles.headerLogo} data-astro-prefetch>
+        <a href={basePath} class={styles.headerLogo} data-astro-prefetch>
           <img
             src="/audiophile-ecommerce/assets/shared/desktop/logo.svg"
             alt="Logo"
@@ -19,16 +20,28 @@ import styles from "./Header.module.css";
         </a>
       </div>
       <nav class={styles.headerNavigation}>
-        <a href="#" class={styles.headerItem} data-astro-prefetch>
+        <a href={basePath} class={styles.headerItem} data-astro-prefetch>
           <span class="subtitle">HOME</span>
         </a>
-        <a href="#" class={styles.headerItem} data-astro-prefetch>
+        <a
+          href=`${basePath}headphones`
+          class={styles.headerItem}
+          data-astro-prefetch
+        >
           <span class="subtitle">HEADPHONES</span>
         </a>
-        <a href="#" class={styles.headerItem} data-astro-prefetch>
+        <a
+          href=`${basePath}speakers`
+          class={styles.headerItem}
+          data-astro-prefetch
+        >
           <span class="subtitle">SPEAKERS</span>
         </a>
-        <a href="#" class={styles.headerItem} data-astro-prefetch>
+        <a
+          href=`${basePath}earphones`
+          class={styles.headerItem}
+          data-astro-prefetch
+        >
           <span class="subtitle">EARPHONES</span>
         </a>
       </nav>

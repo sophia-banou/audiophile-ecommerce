@@ -11,6 +11,11 @@ const basePath = import.meta.env.BASE_URL || "/";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- animate on scroll -->
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
     <!-- favicon -->
     <link
       rel="icon"
@@ -30,7 +35,7 @@ const basePath = import.meta.env.BASE_URL || "/";
     <Header />
     <MobileMenu />
     <slot />
-    <section class="fbanner horizontal-pad">
+    <section class="fbanner horizontal-pad" data-aos="fade-up">
       <div class="fbanner__inner">
         <div class="fbanner__text">
           <h2>
@@ -66,6 +71,16 @@ const basePath = import.meta.env.BASE_URL || "/";
       </div>
     </section>
     <Footer />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" defer
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 650,
+          once: true,
+        });
+      });
+    </script>
     <script>
       import "../scripts/scripts.js";
     </script>
