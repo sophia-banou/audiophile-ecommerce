@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero/index.astro";
 import CategoryNavigation from "../components/CategoryNavigation/index.astro";
 import Button from "../components/Button/index.astro";
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <BaseLayout>
@@ -44,7 +45,11 @@ import Button from "../components/Button/index.astro";
                 deliver truly remarkable sound.
               </p>
             </div>
-            <Button buttonType="2" link="#" text="SEE PRODUCT" />
+            <Button
+              buttonType="2"
+              link={`${basePath}speakers/zx9-speaker`}
+              text="SEE PRODUCT"
+            />
           </div>
         </div>
         <div class="home__banner2" data-aos="fade-left">
@@ -68,7 +73,11 @@ import Button from "../components/Button/index.astro";
           </picture>
           <div class="banner2__info">
             <h4>ZX7 SPEAKER</h4>
-            <Button buttonType="4" link="#" text="SEE PRODUCT" />
+            <Button
+              buttonType="4"
+              link={`${basePath}speakers/zx7-speaker`}
+              text="SEE PRODUCT"
+            />
           </div>
         </div>
         <div class="home__banner3">
@@ -93,7 +102,11 @@ import Button from "../components/Button/index.astro";
           <div class="banner3__box">
             <div class="banner3__info">
               <h4>YX1 EARPHONES</h4>
-              <Button buttonType="4" link="#" text="SEE PRODUCT" />
+              <Button
+                buttonType="4"
+                link={`${basePath}earphones/yx1-earphones`}
+                text="SEE PRODUCT"
+              />
             </div>
           </div>
         </div>

@@ -79,6 +79,10 @@
         gap: 6.77vw;
     }
 
+    .item:nth-child(even) {
+        flex-direction: column;
+    }
+
     .productPicture {
         width: 100%;
     }
@@ -107,5 +111,57 @@
 
     .productText p {
         margin-top: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 599px) {
+    .listWrapper {
+        padding-top: 32vw;
+        padding-bottom: 32vw;
+    }
+
+    .list {
+        gap: 32vw;
+        padding-left: 0px;
+    }
+
+    .item {
+        gap: 8.53vw;
+    }
+
+    .item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .productPicture {
+        width: 100%;
+    }
+
+    .productPicture img {
+        height: 93.87vw;
+    }
+
+    .productInfo {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+
+    }
+
+    .productText {
+        gap: 24px;
+    }
+
+    .productText h2 {
+        font-size: 2.8rem;
+        line-height: normal;
+        letter-spacing: 0.1rem;
+    }
+
+
+    .productText p {
+        margin-top: 0px;
     }
 }

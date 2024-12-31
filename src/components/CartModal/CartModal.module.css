@@ -1,0 +1,90 @@
+.cartModal {
+    position: absolute;
+    right: 11.46vw;
+    top: 8.96vw;
+    display: none;
+    background-color: var(--white);
+    border-radius: 8px;
+    width: 26.18vw;
+    height: auto;
+    padding: 30px 33px;
+    z-index: 5001;
+}
+
+.cartOverlay {
+    display: none;
+    position: absolute;
+    top: 6.74vw;
+    background-color: var(--black);
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+}
+
+.cartModalInner {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartModalHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+}
+
+.headQuantity {
+    color: var(--black);
+}
+
+.headRemove {
+    color: var(--black);
+    opacity: 50%;
+    text-decoration: underline;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.itemLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.itemPicture img {
+    width: 4.44vw;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.itemText {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemName {
+    color: var(--black);
+    font-weight: bold;
+    line-height: 2.5rem;
+    letter-spacing: 0rem;
+}
+
+.itemPrice {
+    color: var(--black);
+    opacity: 50%;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    letter-spacing: 0rem;
+}

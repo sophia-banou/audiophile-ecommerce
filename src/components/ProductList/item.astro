@@ -1,14 +1,15 @@
 ---
 import styles from "./ProductList.module.css";
 import Button from "../Button/index.astro";
+const path = Astro.url.pathname;
 const { product, index } = Astro.props;
 ---
 
-<div class={styles.item}>
-  <picture
-    class={styles.productPicture}
-    data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-  >
+<div
+  class={styles.item}
+  data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+>
+  <picture class={styles.productPicture}>
     <source
       srcset={product.categoryImage.desktop}
       media="(min-width: 1024px)"
@@ -17,12 +18,12 @@ const { product, index } = Astro.props;
     <source srcset={product.categoryImage.mobile} media="(max-width: 599px)" />
     <img src={product.categoryImage.desktop} alt={product.name} />
   </picture>
-  <div class={styles.productInfo} data-aos="fade-up">
+  <div class={styles.productInfo}>
     <div class={styles.productText}>
       {product.new && <span class="overline">NEW PRODUCT</span>}
       <h2>{product.name}</h2>
       <p>{product.description}</p>
     </div>
-    <Button buttonType="1" link="#" text="SEE PRODUCT" />
+    <Button buttonType="1" link=`${path}/${product.slug}` text="SEE PRODUCT" />
   </div>
 </div>

@@ -1,0 +1,14 @@
+---
+import CategoryLayout from "../../layouts/CategoryLayout.astro";
+
+const { category } = Astro.params;
+export async function getStaticPaths() {
+  return [
+    { params: { category: "headphones" } },
+    { params: { category: "earphones" } },
+    { params: { category: "speakers" } },
+  ];
+}
+---
+
+<CategoryLayout category={category} />

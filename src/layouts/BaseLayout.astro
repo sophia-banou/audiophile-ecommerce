@@ -2,7 +2,9 @@
 import Header from "../components/Header/index.astro";
 import Footer from "../components/Footer/index.astro";
 import MobileMenu from "../components/MobileMenu/index.astro";
+import CartModal from "../components/CartModal";
 const basePath = import.meta.env.BASE_URL || "/";
+const { flag } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,6 +26,14 @@ const basePath = import.meta.env.BASE_URL || "/";
       href=`${basePath}assets/favicon-32x32.png`
     />
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- styles -->
     <link rel="stylesheet" href="/audiophile-ecommerce/styles/global.css" />
 
@@ -32,8 +42,9 @@ const basePath = import.meta.env.BASE_URL || "/";
   </head>
 
   <body>
-    <Header />
+    <Header flag={flag} />
     <MobileMenu />
+    <CartModal client:load />
     <slot />
     <section class="fbanner horizontal-pad" data-aos="fade-up">
       <div class="fbanner__inner">
@@ -74,6 +85,7 @@ const basePath = import.meta.env.BASE_URL || "/";
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" defer
     ></script>
     <script>
+      import AOS from "aos";
       document.addEventListener("DOMContentLoaded", () => {
         AOS.init({
           duration: 650,

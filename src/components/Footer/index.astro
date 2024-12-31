@@ -1,28 +1,50 @@
 ---
 import styles from "./Footer.module.css";
+const path = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <footer class=`${styles.footer} horizontal-pad`>
   <div class={styles.footerLine}></div>
   <div class={styles.footerInner}>
     <div class={styles.footerTop}>
-      <a href="#" class={styles.footerLogo} data-astro-prefetch>
+      <a
+        href={basePath}
+        class=`${styles.footerLogo} ${(path == basePath) ? "active" : ""}`
+        data-astro-prefetch
+      >
         <img
           src="/audiophile-ecommerce/assets/shared/desktop/logo.svg"
           alt="Logo"
         />
       </a>
       <nav class={styles.footerNavigation}>
-        <a href="#" class={styles.footerItem} data-astro-prefetch>
+        <a
+          href={basePath}
+          class=`${styles.footerItem} ${(path == basePath) ? " ctive" : ""}`
+          data-astro-prefetch
+        >
           <span class="subtitle">HOME</span>
         </a>
-        <a href="#" class={styles.footerItem} data-astro-prefetch>
+        <a
+          href=`${basePath}headphones`
+          class=`${styles.footerItem} ${(path.endsWith("/headphones")) ? "active" : ""}`
+          data-astro-prefetch
+        >
           <span class="subtitle">HEADPHONES</span>
         </a>
-        <a href="#" class={styles.footerItem} data-astro-prefetch>
+        <a
+          href=`${basePath}speakers`
+          class=`${styles.footerItem} ${(path.endsWith("/speakers")) ? "active" : ""}`
+          data-astro-prefetch
+        >
           <span class="subtitle">SPEAKERS</span>
         </a>
-        <a href="#" class={styles.footerItem} data-astro-prefetch>
+        <a
+          href=`${basePath}earphones`
+          class=`${styles.footerItem} ${(path.endsWith("/earphones")) ? "active" : ""}`
+          data-astro-prefetch
+        >
           <span class="subtitle">EARPHONES</span>
         </a>
       </nav>

@@ -1,0 +1,27 @@
+.counter {
+    background-color: var(--light-grey);
+    padding: 15px 16px;
+}
+
+.counterInner {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.symbol {
+    color: var(--black);
+    opacity: 25%;
+}
+
+.quantity {
+    color: var(--black);
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .symbol,
+    .quantity {
+        font-size: 1.3rem;
+    }
+}

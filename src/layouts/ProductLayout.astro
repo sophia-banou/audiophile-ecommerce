@@ -1,0 +1,25 @@
+---
+const { slug } = Astro.props;
+import data from "../data/data.json";
+import BaseLayout from "./BaseLayout.astro";
+import ProductInfo from "../components/ProductInfo/index.astro";
+import RelatedProducts from "../components/RelatedProducts/index.astro";
+import CategoryNavigation from "../components/CategoryNavigation/index.astro";
+const product = data.find((p) => p.slug === slug);
+---
+
+<BaseLayout flag="true">
+  <div class="header-bg"></div>
+  <div class="product-main-wrapper horizontal-pad">
+    <main class="product-main">
+      <div class="product-nav">
+        <a href="#" id="prev-nav">
+          <p>Go Back</p>
+        </a>
+      </div>
+      <ProductInfo product={product} />
+      <RelatedProducts product={product} />
+      <CategoryNavigation />
+    </main>
+  </div>
+</BaseLayout>

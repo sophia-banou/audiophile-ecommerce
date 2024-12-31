@@ -1,0 +1,23 @@
+---
+const { product } = Astro.props;
+import Button from "../Button/index.astro";
+import styles from "./RelatedProducts.module.css";
+const basePath = import.meta.env.BASE_URL || "/";
+---
+
+<div class={styles.item}>
+  <picture class={styles.relatedPicture}>
+    <source srcset={product.image.desktop} media="(min-width: 1024px)" />
+    <source srcset={product.image.tablet} media="(min-width: 600px)" />
+    <source srcset={product.image.mobile} media="(max-width: 599px)" />
+    <img src={product.image.desktop} alt={product.name} />
+  </picture>
+  <div class={styles.relatedInfo}>
+    <h5>{product.name}</h5>
+    <Button
+      buttonType="1"
+      link=`${basePath}${product.category}/${product.slug}`
+      text="SEE PRODUCT"
+    />
+  </div>
+</div>

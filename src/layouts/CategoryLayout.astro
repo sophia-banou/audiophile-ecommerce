@@ -6,7 +6,7 @@ import CategoryNavigation from "../components/CategoryNavigation/index.astro";
 const { category } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout flag="false">
   <CategoryTitle categoryTitle={category} />
   <ProductList category={category} />
   <div class="horizontal-pad">

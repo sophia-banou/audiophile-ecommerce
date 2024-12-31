@@ -13,15 +13,31 @@ $(document).ready(function () {
 
   $(".hamburger").on({
     click: function () {
-      if (!$("#mobilemenu").hasClass("active")) {
-        $("#mobilemenu").addClass("active");
+      if (!$("#mobilemenu").hasClass("active1")) {
+        $("#mobilemenu").addClass("active1");
         $("#mobilemenu").show();
         $("#mobileoverlay").show();
         $("body").css("position", "fixed");
       } else {
-        $("#mobilemenu").removeClass("active");
+        $("#mobilemenu").removeClass("active1");
         $("#mobilemenu").hide();
         $("#mobileoverlay").hide();
+        $("body").css("position", "static");
+      }
+    },
+  });
+
+  $("#headercart").on({
+    click: function () {
+      if (!$("#cartmodal").hasClass("active1")) {
+        $("#cartmodal").addClass("active1");
+        $("#cartmodal").show();
+        $("#cartoverlay").show();
+        $("body").css("position", "fixed");
+      } else {
+        $("#cartmodal").removeClass("active1");
+        $("#cartmodal").hide();
+        $("#cartoverlay").hide();
         $("body").css("position", "static");
       }
     },
@@ -32,12 +48,16 @@ $(document).ready(function () {
     $("#mobileoverlay").hide();
     $("body").css("position", "static");
   });
-});
 
-$(document).on("ready", function () {
-  // initialization of aos
-  AOS.init({
-    duration: 650,
-    once: true,
+  $("#prev-nav").on({
+    click: function (e) {
+      e.preventDefault();
+      window.history.back();
+    },
+  });
+  $(".active").on({
+    click: function (e) {
+      e.preventDefault();
+    },
   });
 });

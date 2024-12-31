@@ -1,0 +1,18 @@
+---
+import data from "../../data/data.json";
+import ProductLayout from "../../layouts/ProductLayout.astro";
+
+const { category, slug } = Astro.params;
+
+export async function getStaticPaths() {
+  const paths = data.map((product) => ({
+    params: {
+      category: product.category,
+      slug: product.slug,
+    },
+  }));
+  return paths;
+}
+---
+
+<ProductLayout slug={slug} />

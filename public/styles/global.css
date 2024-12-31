@@ -33,29 +33,9 @@
     --sp-12: 12px;
 }
 
-/* FONTS */
-/* Manrope */
-@font-face {
-    font-family: 'manrope';
-    font-style: normal;
-    src: url(../fonts/manrope/Manrope-Regular.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'manrope-medium';
-    font-style: normal;
-    src: url(../fonts/manrope/Manrope-Medium.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'manrope-bold';
-    font-style: normal;
-    src: url(../fonts/manrope/Manrope-Bold.ttf) format("truetype");
-}
-
 /* TEXT PRESETS */
 h1 {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 5.6rem;
     text-transform: uppercase;
@@ -64,7 +44,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 4rem;
     text-transform: uppercase;
@@ -73,7 +53,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 3.2rem;
     text-transform: uppercase;
@@ -82,7 +62,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 2.8rem;
     text-transform: uppercase;
@@ -91,7 +71,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 2.4rem;
     text-transform: uppercase;
@@ -100,7 +80,7 @@ h5 {
 }
 
 h6 {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -109,7 +89,7 @@ h6 {
 }
 
 p {
-    font-family: 'manrope-medium';
+    font-family: 'Manrope';
     font-weight: medium;
     font-size: 1.5rem;
     line-height: 2.5rem;
@@ -117,7 +97,7 @@ p {
 }
 
 .overline {
-    font-family: 'manrope';
+    font-family: 'Manrope';
     font-weight: normal;
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -126,7 +106,7 @@ p {
 }
 
 .subtitle {
-    font-family: 'manrope-bold';
+    font-family: 'Manrope';
     font-weight: bold;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -139,6 +119,11 @@ p {
 
 html {
     font-size: 62.5%;
+}
+
+ul {
+    padding-left: 0px;
+    margin: 0px;
 }
 
 a {
@@ -659,4 +644,69 @@ body {
         max-height: 300px;
         height: 80vw;
     }
+}
+
+.header-bg {
+    height: 6.74vw;
+    width: 100%;
+    background-color: var(--black);
+}
+
+
+
+
+.product-main-wrapper {
+    padding-top: 5.49vw;
+}
+
+.product-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-nav {
+    width: 100%;
+    padding-bottom: 3.89vw;
+}
+
+.product-nav a p {
+    color: var(--black);
+    opacity: 50%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .header-bg {
+        height: 11.72vw;
+    }
+
+    .product-main-wrapper {
+        padding-top: 4.3vw;
+    }
+
+    .product-nav {
+        padding-bottom: 3.13vw;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .header-bg {
+        height: 24vw;
+    }
+
+    .product-main-wrapper {
+        padding-top: 4.27vw;
+    }
+
+    .product-nav {
+        padding-bottom: 6.4vw;
+    }
+}
+
+
+.active {
+    cursor: default;
+}
+
+#headercart {
+    cursor: pointer;
 }

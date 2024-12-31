@@ -1,6 +1,7 @@
 ---
 import styles from "./Hero.module.css";
 import Button from "../Button/index.astro";
+const basePath = import.meta.env.BASE_URL || "/";
 ---
 
 <div class={styles.hero}>
@@ -32,6 +33,10 @@ import Button from "../Button/index.astro";
         for the passionate music enthusiast.
       </p>
     </div>
-    <Button buttonType="1" link="#" text="SEE PRODUCT" />
+    <Button
+      buttonType="1"
+      link={`${basePath}headphones/xx99-mark-two-headphones`}
+      text="SEE PRODUCT"
+    />
   </div>
 </div>
