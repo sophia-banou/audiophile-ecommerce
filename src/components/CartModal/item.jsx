@@ -1,9 +1,10 @@
 import styles from "./CartModal.module.css";
+import QualityCounter from "../QuantityCounter";
 
 const CartItem = ({ product, quantity }) => {
     function formatPrice(price) {
         return `$ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
-    }
+    };
 
     return (
         <div className={styles.cartItem}>
@@ -28,6 +29,7 @@ const CartItem = ({ product, quantity }) => {
                     <p className={styles.itemPrice}>{formatPrice(product.price)}</p>
                 </div>
             </div>
+            <QualityCounter initQuantity={quantity} />
         </div>
     );
 }

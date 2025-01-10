@@ -2,7 +2,8 @@
 const { slug } = Astro.props;
 import data from "../data/data.json";
 import BaseLayout from "./BaseLayout.astro";
-import ProductInfo from "../components/ProductInfo/index.astro";
+import { CartProvider } from "../components/Context/cartContext";
+import ProductInfo from "../components/ProductInfo";
 import RelatedProducts from "../components/RelatedProducts/index.astro";
 import CategoryNavigation from "../components/CategoryNavigation/index.astro";
 const product = data.find((p) => p.slug === slug);
@@ -17,7 +18,9 @@ const product = data.find((p) => p.slug === slug);
           <p>Go Back</p>
         </a>
       </div>
-      <ProductInfo product={product} />
+      <CartProvider>
+        <ProductInfo product={product} client:load />
+      </CartProvider>
       <RelatedProducts product={product} />
       <CategoryNavigation />
     </main>
